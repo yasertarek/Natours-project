@@ -1,0 +1,28 @@
+@mixin clearfix{
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+/* 
+1em = 16px
+    Phone <= [600px =  37.5em]
+    Tablet-Portrait <= [900px = 56.25em ]
+    Tablet-Landscape <= [1200px = 75em ]
+    Big-Desktop > [1800px = 112.5em ]
+*/
+@mixin respond($device){
+    @if $device == phone {
+        @media(max-width: 37.5em){ @content };
+    }
+    @if $device == tab-port {
+        @media(max-width: 56.25em){ @content };
+    }
+    @if $device == tab-land {
+        @media(max-width: 75em){ @content };
+    }
+    @if $device == big-desktop {
+        @media(min-width: 112.5em){ @content };
+    }
+}

@@ -1,0 +1,65 @@
+.story{
+    width: 75%;
+    margin: 0 auto;
+    background-color: rgba($color-white, 0.75);
+    @include clearfix;
+    padding: 6rem;
+    padding-left: 9rem;
+    transform: skewX(-12deg);
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+    border-radius: 3px;
+    @include respond(tab-port){
+        transform: skewX(0);
+        padding: 2rem;
+        padding-left: 3rem;
+        width: 100%;
+    }
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewX(12deg);
+        position: relative;
+        overflow: hidden;
+        @include respond(tab-port){
+            transform: translateX(-1rem) skewX(0);
+        }
+    }
+    &__img{
+        height: 100%;
+        -webkit-transform: translateX(-4rem) scale(1.4);
+        transform: translateX(-4rem) scale(1.4);
+        transition: all 0.5s;
+    }
+    &:not(:last-child){
+        margin-bottom: 8rem;
+        @include respond(tab-port){
+            margin-bottom: 4rem;
+        }
+    }
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-align: center;
+        transition: all 0.5s;
+        opacity: 0;
+    }
+    &:hover &__caption{
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    &:hover &__img{
+        -webkit-transform: translateX(-4rem) scale(1);
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(88%);
+    }
+}
