@@ -11,7 +11,6 @@ This is a Practical project(Landing page) for my course with Jonas
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
