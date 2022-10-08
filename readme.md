@@ -1,4 +1,4 @@
-# Natours Landing Page - Jonas Course Solution
+# Landing Page for a tours Company
 
 This is a Practical project(Landing page) for my course with Jonas
 
